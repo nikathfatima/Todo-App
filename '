@@ -1,0 +1,6 @@
+<h1>List of Tasks</h1>
+<hr>
+<%= @index.each do |ta|%>
+  <%=puts ta %>
+<%= end%>
+<hr>

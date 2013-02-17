@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      a:link {color:#F0F8FF;}
+      a:visited {color:#00FF00;}
+    </style>
+  <title>Todo</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+    <%=render 'layouts/header'%>
+<body>
+  <div class="right"><%=link_to "Log out" , "logout"%></div>
+  <hr>
+  <div class="left"><b>Welcome  <%=session[:user]%></b></div>
+<%= yield %>
+</body>
+  <hr>
+    <%=render 'layouts/footer'%>
+</html>

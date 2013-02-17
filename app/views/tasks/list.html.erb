@@ -1,0 +1,19 @@
+<h1>List of Tasks</h1>
+<hr>
+<form action="/tasks" method="post">
+
+  <input type='hidden' name='_method' value='PUT' />
+
+  <%@tasks.each do |task|%>
+    <% title = task.chomp.split('=>').first %>
+    <input type ="checkbox" name = "tasks[]" value='<%=title%>' <%= task.include?("=>") ? "checked=checked" : '' %> />
+
+    <b><%= title %></b>
+    <br />
+  <%end%>
+
+  <input type  ="submit" value = "SAVE">
+</form>
+</b>
+
+<hr>
